@@ -1,0 +1,75 @@
+<!--Done by LIM WEN HUI CLARA-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <header>
+    <div id="logotext">
+      <a href="home.html"><img src="final logo.jpg"></a>
+      <h1><a href="home.html"> The Pocket Hotel</a></h1>
+    </div>
+  </header>
+  
+  <div class = "tab">
+    <a href='home.html'><button class="tablinks">Home</button></a>
+    <a href='rooms.html'><button class="tablinks">Rooms</button></a>
+    <a href='roomsbooking.html'><button class="tablinks">Book A Room</button></a>
+    <a href='dining.html'><button class="tablinks">Dining</button></a>
+    <a href='facilityinfo.html'><button class="tablinks">Facilities</button></a>
+    <a href='facilityform.html'><button class="tablinks">Facilities Booking</button></a>
+    <a href='contact_us.html'><button class="tablinks">Contact Us</button></a>
+  </div>
+</head>
+  <div class = "page">
+  <form action="reservation.php" method="post">
+      <div class="elem-group">
+        <label for="name">Your Name</label>
+        <input type="text" id="name" name="visitor_name" placeholder="John Doe" pattern=[A-Z\sa-z]{3,20} required>
+      </div>
+      <div class="elem-group">
+        <label for="email">Your E-mail</label>
+        <input type="email" id="email" name="visitor_email" placeholder="john.doe@email.com" required>
+      </div>
+      <div class="elem-group">
+        <label for="phone">Your Phone</label>
+        <input type="tel" id="phone" name="visitor_phone" placeholder="498-348-3872" pattern=(\d{3})-?\s?(\d{3})-?\s?(\d{4}) required>
+      </div>
+      <hr>
+      <div class="elem-group inlined">
+        <label for="adult">Adults</label>
+        <input type="number" id="adult" name="total_adults" placeholder="2" min="1" required>
+      </div>
+      <div class="elem-group inlined">
+        <label for="child">Children</label>
+        <input type="number" id="child" name="total_children" placeholder="2" min="0" required>
+      </div>
+      <div class="elem-group inlined">
+        <label for="checkin-date">Reservation Date</label>
+        <input type="date" id="reservation-date" name="reservationdate" required>
+      </div>
+      <div class="elem-group">
+        <label for="facility">Select facility</label>
+        <select id="facility" name="facility" required>
+            <option value="">Choose the facility from the List</option>
+            <option value="connecting">Gym</option>
+            <option value="adjoining">Karaoke</option>
+            <option value="adjacent">Spa </option>
+        </select>
+      </div>
+      <hr>
+      <div class="elem-group">
+        <label for="message">Anything Else?</label>
+        <textarea id="message" name="visitor_message" placeholder="Tell us anything else that might be important." required></textarea>
+      </div>
+      <button type="submit">Book facility</button>
+      <link rel="stylesheet" type="text/css" href="facilityform.css"/>
+    </form>   
+    <style> 
+      input:hover, textarea:hover { 
+          background-color: #d2f0fa; 
+      } 
+  </style> 
+  </div>
+  <footer>
+    <p>&copy; 2024 The Pocket Hotel. All rights reserved.</p>
+  </footer>
+</html>

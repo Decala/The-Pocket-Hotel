@@ -1,0 +1,118 @@
+<!--Done by Declan  Admin No. 240598B-->
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>The Pocket Hotel</title>
+  <link href="style.css" rel="stylesheet" type="text/css" />
+</head>
+
+<div class = "tab">
+<a href='home.html'><button class="tablinks">Home</button></a>
+<a href='rooms.html'><button class="tablinks">Rooms</button></a>
+  <a href='roomsbooking.html'><button class="tablinks">Book A Room</button></a>
+<a href='dining.html'><button class="tablinks">Dining</button></a>
+<a href='facilityinfo.html'><button class="tablinks">Facilities</button></a>
+<a href='facilityform.html'><button class="tablinks">Facilities Booking</button></a>
+<a href='contact_us.html'><button class="tablinks">Contact Us</button></a>
+</div>
+
+<header>
+  <div id="logotext">
+    <a href="home.html"><img src="final logo.jpg"></a>
+    <h1><a href="home.html"> The Pocket Hotel</a></h1>
+  </div>
+</header>
+
+<body>
+<div id="Contact" class="tabcontent">
+    <h3 id="title">Contact Us!</h3>
+    <div class="contacts">
+      <div class="column">
+        <p>Address</p>
+        <br>
+        <p>Reservations</p>
+        <br>
+        <p>Front Desk</p>
+        <br>
+        <p>Email</p>
+      </div>
+      <div class="column">
+        <p>20 Collyer Quay, #01-02, Singapore 049319</p>
+        <br>
+        <p>+(65) 6123 4567</p>
+        <br>
+        <p>+(65) 6888 8889</p>
+        <br>
+        <address>
+          <a href="mailto:p0ck3th0t3l@gmail.com">p0ck3th0t3l@gmail.com</a>
+        </address>
+      </div>
+    </div>
+    <hr>
+    <br>
+    <div>
+      <h3>Any Requests? Leave us a message</h3>
+      <div class="container">
+        <form action="/action_page.php">
+          <div class="row">
+            <div class="col-15">
+              <label for="name">Name</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="name" name="name" placeholder="Your name.." required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-15">
+              <label for="room_no">Room Number</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="room_no" name="room_no" placeholder="If you are not yet staying with us, enter e370"
+                pattern="[a-e]+[0-9]{3}" required>
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-15">
+              <label for="contact">Contact</label>
+            </div>
+            <div class="col-75">
+              <input type="text" id="contact" name="contact" placeholder="For us to contact you back">
+            </div>
+          </div>
+          <div class="row">
+            <div class="col-15">
+              <label for="contact">Via</label>
+            </div>
+            <div class="col-75">
+              <select id="contact" name="contact">
+                <option value="Mobile Number">Mobile Phone</option>
+                <option value="Email"">Email</option>
+            </select>
+          </div>
+        </div>
+        <div class=" row">
+                  <div class="col-15">
+                    <label for="subject">Subject</label>
+                  </div>
+                  <div class="col-75">
+                    <textarea id="subject" name="subject" placeholder="Write something.."></textarea>
+                  </div>
+            </div>
+            <br>
+            <div class="row">
+              <input type="submit" value="Submit">
+            </div>
+        </form>
+      </div>
+  
+    </div>
+  </div>
+  </body>
+  
+  <footer>
+    <p>&copy; 2024 The Pocket Hotel. All rights reserved.</p>
+  </footer>
+  </html>

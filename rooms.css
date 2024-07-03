@@ -1,0 +1,222 @@
+/* Done by SHIN THANT AUNG 243816M */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f0f0;
+}
+
+.container {
+    width: 70%;
+    margin: auto;
+    overflow: hidden;
+}
+
+.branding-container {
+    width: auto;
+    margin-left: 0;
+    padding-left: 20px;
+}
+/* Pocket hotel banner */
+header {
+    background: #78B7C9;
+    color: #fff;
+    padding-top: 0px;
+    min-height: 70px;
+    border-bottom: #78B7C9 3px solid;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 5;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+header #banner {
+    display: flex;
+    align-items: center;
+}
+
+header .logo {
+    width: 50px;
+    height: 50px;
+    margin-right: 15px;
+}
+
+header a {
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-size: 16px;
+}
+
+header a:hover {
+    text-decoration: underline;
+}
+
+header h1 {
+    margin: 0;
+}
+
+.tab {
+    overflow: hidden;
+    border: 1px solid #96D2E6;
+    background-color: #96D2E6;
+    position:fixed;
+    top: 70px;
+    color: #96D2E6;
+    width: 100%;
+    z-index: 5;
+    left: 0px;
+    right: 0px;
+}
+  
+.tab button {
+    background-color: inherit;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    transition: 0.3s;
+    padding-left: 1%;
+    padding-right: 1%;
+    font-family: Arial, Helvetica, sans-serif sans-serif;
+    font-size: 14px;
+    z-index: 5;
+}
+  
+.tab button:hover {
+    background-color: #ddd;
+}
+  
+.tab button.active {
+    background-color: #ccc;
+}
+  
+.tabcontent {
+    padding: 6px 12px;
+    border: 1px solid #ccc;
+    border-top: none;
+    position: relative;
+}
+
+/* Current 'Our rooms' */
+.main-header {
+    text-align: center;
+    color: #fff;
+    padding: 10px;
+    margin-top: 50px;
+    font-size: 27px;
+    font-family: Bahnschrift;
+}
+
+.header-image-container {
+    position: relative;
+    width: 100%;
+    height: 330px;
+    background-image: url('standard\ room.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+.header-text {
+    opacity: 0.8;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.header-text h1 {
+    margin: 0;
+    font-size: 100px;
+}
+/*Room selection (better to tell me to edit) */
+.roomselection {
+    background:#fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.roomselection h2 {
+    color: #333;
+    padding-bottom: 5px;
+    text-align: center;
+    font-family: Bahnschrift;
+}
+
+.roomcard {
+    display: flex;
+    margin-bottom: 30px;
+    padding: 10px;
+    border: 5px solid #78B7C9;
+    border-radius: 5px;
+    background:  #fff
+}
+
+.roomcard img {
+    max-width: 400px;
+    height: auto;
+    margin-right: 30px;
+    margin-left: 30px;
+}
+
+.roomdescription {
+    color: #333;
+    font-family: Bahnschrift;
+}
+
+.roomfeatures {
+    font-size: 16px;
+}
+.room-details h3 {
+    font-family: Bahnschrift;
+    padding-top: 35px;
+    margin: 0;
+    color: #444;
+}
+
+.roominfo {
+    margin: 0px;
+    margin-left: 20px;
+    color: #666;
+    display: inline-block;
+    flex: 1;
+    font-size: 20px;
+}
+
+.roomprice {
+    font-weight: bold;
+    color: #333;
+}
+/*Book now button */
+.booknow {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.booknow-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #78B7C9;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.booknow-button:hover {
+    background: #555;
+}
+/* Copyright section */
+footer {
+    background: #78B7C9;
+    color: #fff;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: 20px;
+}

@@ -1,0 +1,78 @@
+<!--Done by Shermaine-->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>dining</title>
+    <link rel="stylesheet" href="dinstyle.css">
+</head>
+    <header>
+      <div id="logotext">
+        <a href="home.html"><img src="final logo.jpg"></a>
+        <h1><a href="home.html"> The Pocket Hotel</a></h1>
+      </div>
+    </header>
+
+    <div class = "tab">
+    <a href='home.html'><button class="tablinks">Home</button></a>
+    <a href='rooms.html'><button class="tablinks">Rooms</button></a>
+    <a href='roomsbooking.html'><button class="tablinks">Book A Room</button></a>
+    <a href='dining.html'><button class="tablinks">Dining</button></a>
+    <a href='facilityinfo.html'><button class="tablinks">Facilities</button></a>
+    <a href='facilityform.html'><button class="tablinks">Facilities Booking</button></a>
+    <a href='contact_us.html'><button class="tablinks">Contact Us</button></a>
+    </div>
+<body>
+    <div style="text-align: center;">
+        <h1>BOOKING FORM</h1>
+    </div>
+</body>
+<body>
+    <div style="text-align: center;">
+    <h4>NAME</br><input type='text'name='name'size='100'value='' required/></br>
+    <h4>EMAIL</br><input type='text'name='email'size='100'value='' required/></br>
+    <h4>HP NUMBER</br><input type='text'name='number'size='100'value='' required/></br>
+    </div>
+</body>
+<body>
+    <div style="text-align: center;">
+        <h4>Please select a date</h4>
+        <form action="/submit_date" method="post">
+            <input type="date" id="date" name="date" required><br><br>
+        </form>
+        <form action="/submit_time_range" method="post">
+            <label for="startTime">From:</label>
+            <input type="time" id="startTime" name="startTime" required>
+            <br>
+            <label for="endTime">To:</label>
+            <input type="time" id="endTime" name="endTime" required>
+        </form>
+        <h4>approx number of people</h4>
+            <form action="people" method="post">
+                <input type="number" id="numpeople" name="numpeople" min="1" required>
+            </form>
+            </br>
+            <select name="type of booking">
+                <option value="1">breakfast</option>
+                <option value="2">lunch</option>
+                <option value="3">dinner</option>
+            </select>
+            <table border="0" cellpadding="20" align="center">
+                <tr>
+                <th> <section class="submit"> 
+                    <form method="get" action="confi.html">
+                      <button type="submit" height="100px" width="100px" class="btn" ><h3> submit </h3></button>
+            </form></th>
+            <th> <section class="back"> 
+                <form method="get" action="dining.html">
+                  <button type="submit" height="100px" width="100px" class="btn" ><h3> back </h3></button>
+        </form></th>
+    </tr>
+    </div>
+</body>
+<footer>
+            <p>&copy; 2024 The Pocket Hotel. All rights reserved.</p>
+</footer>
+</html>
+<!-- Done by Shermaine -->
