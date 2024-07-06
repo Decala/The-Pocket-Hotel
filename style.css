@@ -344,3 +344,8 @@ footer {
     }
   }
 }
+@media only screen and (max-width: 682px) {
+  #Extra_br{
+    padding-bottom: 18.5px;
+  }
+}
