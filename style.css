@@ -140,20 +140,25 @@ header img{
   
   .location{
     display: flex;
-    align-items: center;
-    justify-content: center;
-
+    flex-direction: row;
+    padding-left:20%;
+    flex-wrap: wrap;
+    padding-right:20%;
     img{
-      padding-left: 15%;
+      width: 40%;
+      height: 100%;
+      padding-right: 1%;
+      flex:30%;
     }
+    
     p{
-      float:right;
-      padding-left: 5%;
-      padding-right: 2%;
       margin:1px;
       font-family: Arial, sans-serif;
       color: black;
       font-size: 15px;
+      padding-top: 1px;
+      padding-bottom: 1px;
+      flex:40%;
     }
   }
 
@@ -164,6 +169,10 @@ header img{
     padding: 10px;
     background: #fff;
     flex: 1;
+    img{
+      width: 95%;
+      height: 100%;
+    }
     h3{
       font-family: Bahnschrift;
       color: black;
@@ -180,6 +189,8 @@ header img{
     .column{
       flex: 30%;
       text-align: center;
+      width: 30%;
+      height:100%;
     }
     .spacing{
       flex:10%;
@@ -311,4 +322,25 @@ footer {
   top: 140px;
   position:relative;
   font-family: Arial, sans-serif;
+}
+/*320px or 480px phone
+768px tablets
+1920px desktop*/
+@media only screen and (max-width: 810px) {
+  #Home{
+    .location{
+      display:block;
+      padding-left: 0px;
+      padding-right:0px;
+      img{
+        padding: 0px;
+        width: 100%;
+        height: 100%;
+      }
+      p{
+        text-align:center;
+        padding-right:0px;
+      }
+    }
+  }
 }
