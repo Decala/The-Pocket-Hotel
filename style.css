@@ -285,7 +285,7 @@ footer {
   #flextape{
     display:flex;
     margin: auto;
-    width: 25%;
+    justify-content: center;
   }
   
   img{
