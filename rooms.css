@@ -217,9 +217,8 @@ footer {
     #flextape{
       display:flex;
       margin: auto;
-      width: 25%;
+      justify-content: center;
     }
-  
     
     img{
       padding-top: 5px;
@@ -230,19 +229,27 @@ footer {
     
     a {
       color:white;
+      text-decoration: none;
     }
-    .pages{
+    .pages {
       display: flex;
-      ul{
+
+      ul {
         flex: 25%;
         list-style-type: none;
       }
+
+      ul:last-child {
+        padding-right: 20px;
+      }
+
       li {
         padding: 8px;
         margin-bottom: 7px;
         color: #ffffff;
       }
-      li:first-child{
+
+      li:first-child {
         font-family: Bahnschrift;
         font-size: 20px;
       }
@@ -254,5 +261,80 @@ footer {
     margin-top: 20px;
     top: 140px;
     position:relative;
-    font-family: Arial, sans-serif;
+    font-family: Arial, sans-serif;
   }
+
+  @media (max-width: 768px) {
+    .container {
+        width: 90%;
+        margin: auto;
+    }
+
+    header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    header #banner {
+        flex-direction: column;
+    }
+
+    .tab button {
+        padding: 8px;
+        font-size: 12px;
+    }
+
+    .roomcard {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .roomcard img {
+        margin: 0 0 15px 0;
+        width: 100%;
+    }
+
+    .header-text h1 {
+        font-size: 50px;
+    }
+
+    .tab button {
+        padding-left: 2%;
+        padding-right: 2%;
+    }
+
+    .tab button {
+        font-size: 12px;
+    }
+
+    .footer #flextape {
+        width: 80%;
+    }
+
+    .footer .pages {
+        flex-direction: column;
+        align-items: center;
+    }
+}
+
+@media (max-width: 480px) {
+    .tab button {
+        padding: 6px;
+        font-size: 10px;
+    }
+
+    .header-text h1 {
+        font-size: 30px;
+    }
+
+    .footer #flextape {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer .pages ul {
+        width: 100%;
+    }
+}
