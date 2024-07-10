@@ -145,7 +145,7 @@ header img{
     flex-wrap: wrap;
     padding-right:20%;
     img{
-      width: 40%;
+      width: 45%;
       height: 100%;
       padding-right: 1%;
       flex:30%;
@@ -297,12 +297,16 @@ footer {
   
   a {
     color:white;
+    text-decoration: none;
   }
   .pages{
     display: flex;
     ul{
       flex: 25%;
       list-style-type: none;
+    }
+    ul:last-child{
+      padding-right:30px;
     }
     li {
       padding: 8px;
