@@ -41,7 +41,7 @@ header img{
   top: 70px;
   color: #96D2E6;
   width: 100%;
-  z-index: 5;
+  z-index: 6;
   left: 0px;
   right: 0px;
 }
@@ -305,9 +305,11 @@ footer {
       flex: 25%;
       list-style-type: none;
     }
+    
     ul:last-child{
       padding-right:30px;
     }
+    
     li {
       padding: 8px;
       margin-bottom: 7px;
@@ -330,7 +332,7 @@ footer {
 /*320px or 480px phone
 768px tablets
 1920px desktop*/
-@media only screen and (max-width: 810px) {
+@media (max-width: 810px) {
   #Home{
     .location{
       display:block;
@@ -349,8 +351,73 @@ footer {
   }
 }
 
-@media only screen and (max-width: 682px) {
+@media (max-width: 682px) {
   #Extra_br{
     padding-bottom: 18.5px;
+  }
+}
+
+@media (max-width: 480px) {
+    .tab button {
+        padding-left: 3%;
+        padding-right: 3%;
+    }
+
+    .tab button {
+        font-size: 10px;
+    }
+
+    .footer #flextape {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .footer .pages ul {
+        width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+  .container {
+      width: 90%;
+      margin: auto;
+  }
+
+  header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  header #logotext {
+    flex-direction: column;
+  }
+
+  .tab button {
+      
+      padding: 8px;
+      font-size: 12px;
+  }
+
+  .header-text h1 {
+      font-size: 50px;
+  }
+
+  .tab button {
+      padding-left: 2%;
+      padding-right: 2%;
+      font-size: 12px;
+  }
+
+
+  .footer #flextape {
+      width: 80%;
+  }
+
+  .footer .pages {
+      flex-direction: column;
+      align-items: center;
   }
 }
