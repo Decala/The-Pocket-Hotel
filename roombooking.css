@@ -158,6 +158,14 @@ header h1 {
     border-radius: 5px;
 }
 
+.booking-form input.error {
+    border-color: red;
+}
+
+#errorMessage {
+    color: red;
+}
+
 .submit-button {
     display: block;
     width: 100%;
