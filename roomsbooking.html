@@ -8,6 +8,7 @@
     <title>The Pocket Hotel - Room Booking</title>
     <link rel="stylesheet" href="roombooking.css">
 </head>
+
 <body>
     <script src="roombooking.js"></script>
 
@@ -55,8 +56,8 @@
             <input type="email" id="email" name="email" placeholder="Enter your Email" required>
             
             <label for="phone">Phone Number:</label>
-            <input type="tel" id="phone" name="phone" placeholder="Enter your phone number. Example - +651234567" required>
-            <p id="errorMessage" style="color: red;"></p>
+            <input type="number" id="phone" name="phone" min=80000000
+            max=99999999 placeholder="Enter your phone number. Example - +651234567" aria-invalid="true" aria-describedby="formats error" required>
             
             <h2>Select Room</h2>
 
@@ -78,12 +79,23 @@
             
             <h2>Payment Method</h2>
 
-            <label for="paymentmethod">Payment Method:</label>
-            <select id="paymentmethod" name="paymentmethod" required>
+            <label for="payment">Payment Method:</label>
+            <select id="payment" name="payment" required>
                 <option value="credit">Credit Card</option>
                 <option value="debit">Debit Card</option>
-                <option value="Cash">Cash</option>
+                <option value="cash">Cash</option>
             </select>
+
+            <div id="cardDetails" class="hidden">
+                <label for="cardnumber">Card Number</label>
+                <input type="text" id="cardnumber" name="cardnumber">
+
+                <label for="expiry">Expiry Date</label>
+                <input type="text" id="expiry" name="expiry">
+
+                <label for="cvv">CVV</label>
+                <input type="text" id="cvv" name="cvv">
+            </div>
             
             <button type="submit" class="submit-button">Submit</button>
         </form>

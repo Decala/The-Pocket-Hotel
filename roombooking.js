@@ -19,6 +19,10 @@ document.addEventListener('DOMContentLoaded', function () {
         if (!isValid) {
             event.preventDefault();
             alert('Please fill out all required fields.');
+        } else {
+            event.preventDefault();
+            // Redirect to confirmation page
+            window.location.href = 'roomconfirmation.html';
         }
     });
 

@@ -4,6 +4,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f0f0f0;
+    overflow-y: auto;
 }
 
 .container {
@@ -166,6 +167,10 @@ header h1 {
     color: red;
 }
 
+.hidden {
+    display: none;
+}
+
 .submit-button {
     display: block;
     width: 100%;
@@ -180,6 +185,22 @@ header h1 {
 
 .submit-button:hover {
     background: #555;
+}
+
+.confirmation-text {
+    background: #fff;
+    padding: 20px;
+    margin: 20px 0;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+    text-align: center;
+    color:#333;
+    margin-bottom: 10px;
+}
+
+.confirmation-text h3 {
+    color: #333;
+    margin-bottom: 10px;
 }
 
 footer {

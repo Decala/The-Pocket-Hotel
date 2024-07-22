@@ -136,7 +136,7 @@ header h1 {
 }
 /*Room selection (better to tell me to edit) */
 .roomselection {
-    background:#fff;
+    background:#96D2E6;
     margin: 10px 0;
     padding: 10px;
     border-radius: 5px;
@@ -154,9 +154,9 @@ header h1 {
     display: flex;
     margin-bottom: 30px;
     padding: 10px;
-    border: 5px solid #78B7C9;
-    border-radius: 5px;
-    background:  #fff
+    /*border: 5px solid #78B7C9;
+    border-radius: 5px;*/
+    background:  #fff;
 }
 
 .roomcard img {
