@@ -1,6 +1,77 @@
 document.addEventListener('DOMContentLoaded', function () {
-    // Form Validation
     const form = document.querySelector('.booking-form');
+    const paymentmethod = document.getElementById('payment');
+    const cardDetails = document.getElementById('cardDetails');
+
+    // Display card details based on payment method
+    paymentmethod.addEventListener('change', function() {
+        if (paymentmethod.value === 'credit' || paymentmethod.value === 'debit') {
+            cardDetails.classList.remove('hidden');
+        } else {
+            cardDetails.classList.add('hidden');
+        }
+    });
+
+    // Real-time validation for form fields
+    function validateField(input, pattern, errorElement, errorMessage) {
+        input.addEventListener('input', function () {
+            if (!pattern.test(input.value)) {
+                errorElement.textContent = errorMessage;
+                input.classList.add('error');
+            } else {
+                errorElement.textContent = '';
+                input.classList.remove('error');
+            }
+        });
+    }
+
+    // Phone number validation
+    const phoneInput = document.getElementById('phone');
+    const phoneError = document.getElementById('phone-error');
+    const phonePattern = /^\+\d{1,3}\d{8,}$/;
+    validateField(phoneInput, phonePattern, phoneError, 'Phone number must include a country code and be at least 8 digits long.');
+
+    // Card number validation
+    const cardnumberInput = document.getElementById('cardnumber');
+    const cardnumberError = document.getElementById('cardnumber-error');
+    const cardnumberPattern = /^\d{13,19}$/;
+    validateField(cardnumberInput, cardnumberPattern, cardnumberError, 'Card number must be between 13 and 19 digits long.');
+
+    // Expiry date validation
+    const expiryInput = document.getElementById('expiry');
+    const expiryError = document.getElementById('expiry-error');
+    const expiryPattern = /^(0[1-9]|1[0-2])\/(\d{2})$/;
+    validateField(expiryInput, expiryPattern, expiryError, 'Expiry date must be in MM/YY format.');
+
+    // CVV validation
+    const cvvInput = document.getElementById('cvv');
+    const cvvError = document.getElementById('cvv-error');
+    const cvvPattern = /^\d{3,4}$/;
+    validateField(cvvInput, cvvPattern, cvvError, 'CVV must be 3 or 4 digits long.');
+
+    // Check-in/out date validation
+    const checkin = document.getElementById('checkin');
+    const checkout = document.getElementById('checkout');
+
+    function validateDates() {
+        let isValid = true;
+
+        if (checkout.value <= checkin.value) {
+            alert('Check-out date must be after check-in date.');
+            checkout.value = '';
+            isValid = false;
+        }
+
+        if (checkin.value && checkout.value <= checkin.value) {
+            alert('Check-out date must be after check-in date.');
+            checkin.value = '';
+            isValid = false;
+        }
+
+        return isValid;
+    }
+
+    // Form submission validation
     form.addEventListener('submit', function (event) {
         let isValid = true;
 
@@ -10,73 +81,30 @@ document.addEventListener('DOMContentLoaded', function () {
             if (!field.value.trim()) {
                 isValid = false;
                 field.style.borderColor = 'red';
-                // Display an error message if needed
             } else {
                 field.style.borderColor = '';
             }
         });
 
+        // Additional validation
+        if (!validateDates()) {
+            isValid = false;
+        }
+
+        // Check card details if payment method is credit or debit
+        if (paymentmethod.value === 'credit' || paymentmethod.value === 'debit') {
+            if (cardnumberError.textContent || expiryError.textContent || cvvError.textContent) {
+                isValid = false;
+            }
+        }
+
         if (!isValid) {
             event.preventDefault();
-            alert('Please fill out all required fields.');
+            alert('Please fill out all required fields correctly.');
         } else {
-            event.preventDefault();
             // Redirect to confirmation page
             window.location.href = 'roomconfirmation.html';
         }
     });
-
-    // Date Validation
-    const checkin = document.getElementById('checkin');
-    const checkout = document.getElementById('checkout');
-
-    checkout.addEventListener('change', function () {
-        if (checkout.value <= checkin.value) {
-            alert('Check-out date must be after check-in date.');
-            checkout.value = '';
-        }
-    });
-
-    checkin.addEventListener('change', function () {
-        if (checkout.value && checkout.value <= checkin.value) {
-            alert('Check-out date must be after check-in date.');
-            checkout.value = '';
-        }
-    });
-
-    // Phone Number Validation
-    const phoneInput = document.getElementById('phone');
-    const phonePattern = /^\+\d{1,3}\d{1,14}$/;
-
-    phoneInput.addEventListener('input', function () {
-        if (!/^\d+$/.test(phoneValue)) {
-            errorMessage.textContent = 'Phone number must be number only.';
-            phoneInput.classList.add('error');
-        } else {
-            errorMessage.textContent = '';
-            phoneInput.classList.remove('error');
-        }
-    });
-
-
-    // Confirmation Before Form Submission
-    form.addEventListener('submit', function (event) {
-        const confirmed = confirm('Are you sure you want to submit the form?');
-        if (!confirmed) {
-            event.preventDefault();
-        }
-    });
-
-    form.addEventListener('submit', function (event) {
-        const phoneValue = phoneInput.value;
-        if (!/^\d+$/.test(phoneValue)) {
-            event.preventDefault();
-            errorMessage.textContent = 'Phone number must be numeric.';
-            phoneInput.classList.add('error');
-        } else if (phoneValue.length < 10) {
-            event.preventDefault();
-            errorMessage.textContent = 'Phone number must be at least 10 digits long.';
-            phoneInput.classList.add('error');
-        }
-    });
 });
+
