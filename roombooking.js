@@ -40,7 +40,7 @@ document.addEventListener('DOMContentLoaded', function () {
     // Expiry date validation
     const expiryInput = document.getElementById('expiry');
     const expiryError = document.getElementById('expiry-error');
-    const expiryPattern = /^(0[1-9]|1[0-2])\/(\d{2})$/;
+    const expiryPattern = /^\d{2}\/\d{2}$/;
     validateField(expiryInput, expiryPattern, expiryError, 'Expiry date must be in MM/YY format.');
 
     // CVV validation
@@ -52,20 +52,19 @@ document.addEventListener('DOMContentLoaded', function () {
     // Check-in/out date validation
     const checkin = document.getElementById('checkin');
     const checkout = document.getElementById('checkout');
+    const checkinError = document.getElementById('checkin-error');
+    const checkoutError = document.getElementById('checkout-error');
 
     function validateDates() {
         let isValid = true;
 
-        if (checkout.value <= checkin.value) {
-            alert('Check-out date must be after check-in date.');
-            checkout.value = '';
+        if (checkout.value && checkout.value <= checkin.value) {
+            checkoutError.textContent = 'Check-out date must be after check-in date.';
+            checkout.classList.add('error');
             isValid = false;
-        }
-
-        if (checkin.value && checkout.value <= checkin.value) {
-            alert('Check-out date must be after check-in date.');
-            checkin.value = '';
-            isValid = false;
+        } else {
+            checkoutError.textContent = '';
+            checkout.classList.remove('error');
         }
 
         return isValid;
@@ -102,9 +101,8 @@ document.addEventListener('DOMContentLoaded', function () {
             event.preventDefault();
             alert('Please fill out all required fields correctly.');
         } else {
-            // Redirect to confirmation page
-            window.location.href = 'roomconfirmation.html';
+            // Allow form submission to redirect to confirmation page
+            form.action = 'roomconfirmation.html';
         }
     });
 });
-
