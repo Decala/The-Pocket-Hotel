@@ -196,6 +196,48 @@ nav button.active {
     font-weight: bold;
     color: #333;
 }
+
+/*Carousel*/
+.carousel {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px 0;
+}
+
+.carousel-images {
+    display: flex;
+    overflow: hidden;
+    width: 400px;
+    height: 300px; 
+    scroll-behavior: smooth;
+}
+
+.carousel-images img {
+    min-width: 100%;
+    transition: transform 0.5s ease;
+}
+
+.carousel-buttons {
+    display: flex;
+    justify-content: space-between;
+    width: 75px;
+    margin-top: 10px;
+}
+
+.prev, .next {
+    background-color: #78B7C9;
+    color: white;
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.prev:hover, .next:hover {
+    background-color: #555;
+}
+
 /*Book now button */
 .booknow {
     text-align: center;
