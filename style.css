@@ -224,38 +224,41 @@ header img{
     flex: 50%;
   }
 
-  input[type=text], select, textarea {
-    width: 80%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-    font-family: Arial, sans-serif;
-  }
-
-  label {
-    padding: 12px;
-    display: inline-block;
-  }
-
-  input[type=submit] {
-    background-color: #02acf5;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-  }
-
-  input[type=submit]:hover {
-    background-color: #024ea1;
-  }
-
   .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    
+    label {
+      display: block;
+      margin-top: 10px;
+      color: #666;
+    }
+    input, select, textarea {
+      width: 95%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .submit-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: #78B7C9;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background: #555;
+    }
   }
 
   .col-15 {
