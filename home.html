@@ -7,6 +7,7 @@
   <meta name="viewport" content="width=device-width">
   <title>The Pocket Hotel</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
+  <script src="script.js"></script>
 </head>
 
 
@@ -26,7 +27,12 @@
   <a href='contact_us.html'><button class="tablinks">Contact Us</button></a>
   </div>
 </header>
-
+<body>
+<script>(g=>{var h,a,k,p="The Google Maps JavaScript API",c="google",l="importLibrary",q="__ib__",m=document,b=window;b=b[c]||(b[c]={});var d=b.maps||(b.maps={}),r=new Set,e=new URLSearchParams,u=()=>h||(h=new Promise(async(f,n)=>{await (a=m.createElement("script"));e.set("libraries",[...r]+"");for(k in g)e.set(k.replace(/[A-Z]/g,t=>"_"+t[0].toLowerCase()),g[k]);e.set("callback",c+".maps."+q);a.src=`https://maps.${c}apis.com/maps/api/js?`+e;d[q]=f;a.onerror=()=>h=n(Error(p+" could not load."));a.nonce=m.querySelector("script[nonce]")?.nonce||"";m.head.append(a)}));d[l]?console.warn(p+" only loads once. Ignoring:",g):d[l]=(f,...n)=>r.add(f)&&u().then(()=>d[l](f,...n))})
+        ({key: "", v: "weekly"});
+initMap();
+</script>
+  
 <div id="Home" class="tabcontent">
   <div class=contained_words>
     <img src="hotel.png" width=80%, height=600>
@@ -70,9 +76,9 @@
       explore this city</p>
   </div>
   <br>
+  <map id = map></map>
+  <!--1.2845° N, 103.8528° E-->
   <div class="location">
-    <img src="location.png">
-<!--1.2845° N, 103.8528° E-->
     <p>Located at 20 Collyer Quay, Singapore 049319, our hotel offers a great location in the heart of Singapore, just steps away from the historic Raffles Place. Guests can reach the hotel via various different transportation options such as taxis, ride-hailing services, and public transportation like the nearby Raffles Place MRT station. The hotel has convenient access to a large number of nearby tourist attractions such as The Merlion, National Gallary Singapore, and Espanade. For inquiries, please directly contact our hotel at +(65) 6888 8889 or email us at p0ck3th0t3l@gmail.com
     <p>
   </div>
@@ -80,7 +86,7 @@
     allowing you to access the whole of Singapore easily!</p>
 </div>
 </div>
-
+</body>
 
 <footer>
   <div id = "flextape">
