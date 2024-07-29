@@ -1,20 +1,18 @@
 <!--Done by SHIN THANT AUNG 243816M-->
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width">
     <title>The Pocket Hotel - Rooms</title>
     <link rel="stylesheet" href="rooms.css">
 </head>
-
 <body>
     <header>
         <div class="banner-container">
             <div id="banner">
                 <a href="home.html">
-                  <img src="final logo.jpg" alt="The Pocket Hotel Logo" class="logo">
+                    <img src="final logo.jpg" alt="The Pocket Hotel Logo" class="logo">
                 </a>
                 <h1><a href="home.html">The Pocket Hotel</a></h1>
             </div>
@@ -28,7 +26,7 @@
                 <a href='facilityform.html'><button class="tablinks">Facilities Booking</button></a>
                 <a href='contact_us.html'><button class="tablinks">Contact Us</button></a>
             </nav>
-         </div>
+        </div>
     </header>
 
     <section class="main-header">
@@ -43,77 +41,62 @@
         <div class="roomselection">
             <h2>Available Rooms</h2>
 
-            <!--Standard-->
+            <!-- Standard Room -->
             <div class="roomcard">
-                <div class="carousel">
-                    <div class="carousel-images">
-                        <img src="standard room.jpg" alt="Standard Room 1">
-                        <img src="standard_bath.jpg" alt="Standard Bath">
-                        <img src="standard room 3.jpg" alt="Standard Room 3">
-                    </div>
-                    <div class="carousel-buttons">
-                        <button class="prev">&lt;</button>
-                        <button class="next">&gt;</button>
-                    </div>
+                <div class="roomcarousel" id="standardCarousel">
+                    <img class="room-image" src="standard room.jpg" style="width:100%">
+                    <img class="room-image" src="standard_bath.jpg" style="width:100%">
+                    <button class="carousel-button prev" onclick="changeSlide(-1, 'standardCarousel')">&#10094;</button>
+                    <button class="carousel-button next" onclick="changeSlide(1, 'standardCarousel')">&#10095;</button>
                 </div>
                 <div class="roominfo">
                     <h3>Standard Room</h3>
                     <p class="roomdescription">Enjoy your stay in our cozy standard room. Ideal for those looking for a relaxing and undisturbed stay.</p>
                     <p class="roomfeatures">
-                    1 Queen-size bed<br> 
-                    Free Wi-Fi<br>
-                    Flat-screen TV<br>
-                    Private bathroom<br>
-                    Air conditioning
+                        1 Queen-size bed<br> 
+                        Free Wi-Fi<br>
+                        Flat-screen TV<br>
+                        Private bathroom<br>
+                        Air conditioning
                     </p>
                     <p class="roomprice">$100/Night</p>
                 </div>
             </div>
 
-            <!--Deluxe-->
+            <!-- Deluxe Room -->
             <div class="roomcard">
-                <div class="carousel">
-                    <div class="carousel-images">
-                        <img src="deluxe.jpg" alt="Deluxe Room 1">
-                        <img src="deluxe_bath.jpg" alt="Deluxe Bath">
-                        <img src="deluxe room 3.jpg" alt="Deluxe Room 3">
-                    </div>
-                    <div class="carousel-buttons">
-                        <button class="prev">&lt;</button>
-                        <button class="next">&gt;</button>
-                    </div>
+                <div class="roomcarousel" id="deluxeCarousel">
+                    <img class="room-image" src="deluxe.jpg" style="width:100%">
+                    <img class="room-image" src="deluxe_bath.jpg" style="width:100%">
+                    <button class="carousel-button prev" onclick="changeSlide(-1, 'deluxeCarousel')">&#10094;</button>
+                    <button class="carousel-button next" onclick="changeSlide(1, 'deluxeCarousel')">&#10095;</button>
                 </div>
                 <div class="roominfo">
                     <h3>Deluxe Room</h3>
                     <p class="roomdescription">Experience the ultimate comfort in our luxurious deluxe room. Suitable for couples or families.</p>
                     <p class="roomfeatures">
-                    1 King-size bed or 2 Queen-size beds<br>
-                    Free Wi-Fi<br>
-                    Flat-screen TV<br>
-                    Private bathroom<br>
-                    Air conditioning
+                        1 King-size bed or 2 Queen-size beds<br>
+                        Free Wi-Fi<br>
+                        Flat-screen TV<br>
+                        Private bathroom<br>
+                        Air conditioning
                     </p>
                     <p class="roomprice">$150/Night</p>
                 </div>
             </div>
 
-            <!--Suite-->
+            <!-- Suite Room -->
             <div class="roomcard">
-                <div class="carousel">
-                    <div class="carousel-images">
-                        <img src="suite.jpg" alt="Suite 1">
-                        <img src="suite_bath.jpg" alt="Suite Bath">
-                        <img src="suite room 3.jpg" alt="Suite 3">
-                    </div>
-                    <div class="carousel-buttons">
-                        <button class="prev">&lt;</button>
-                        <button class="next">&gt;</button>
-                    </div>
+                <div class="roomcarousel" id="suiteCarousel">
+                    <img class="room-image" src="suite.jpg" style="width:100%">
+                    <img class="room-image" src="suite_bath.jpg" style="width:100%">
+                    <button class="carousel-button prev" onclick="changeSlide(-1, 'suiteCarousel')">&#10094;</button>
+                    <button class="carousel-button next" onclick="changeSlide(1, 'suiteCarousel')">&#10095;</button>
                 </div>
                 <div class="roominfo">
                     <h3>Suite</h3>
-                    <p class="roomdescription"> Relax and unwind in our spacious suite. Perfect for travelers that need a break from the hustle and bustle.</p>
-                      <p class="roomfeatures">
+                    <p class="roomdescription">Relax and unwind in our spacious suite. Perfect for travelers that need a break from the hustle and bustle.</p>
+                    <p class="roomfeatures">
                         1 King-size bed<br>
                         Free Wi-Fi<br>
                         Flat-screen TV<br>
@@ -125,43 +108,43 @@
                 </div>
             </div>
 
-            <!--booking button-->
+            <!-- Booking Button -->
             <div class="booknow">
                 <a href="roomsbooking.html" class="booknow-button">Book Now!</a>
             </div>
         </div>
     </div>
-    
-<!--copyright, maybe a facebook button if we want-->
-<footer>
-    <div id="flextape">
-      <img src="final logo.jpg">
-      <h1>The Pocket Hotel</h1>
-    </div>
-    <div class="pages">
-      <ul>
-        <li>Book something</li>
-        <li><a href ='roomsbooking.html'>Book a Room</a></li>
-        <li><a href ='facilityform.html'>Book a Facility</a></li>
-        <li><a href ='booking.html'>Get a Reservation</a></li>
-      </ul>
-      <ul>
-        <li>Information Pages</li>
-        <li><a href ='rooms.html'>Our Rooms</a></li>
-        <li><a href ='dining.html'>Our Restaurant</a></li>
-        <li><a href ='contact_us.html'>Contact Us</a></li>
-      </ul>
-      <ul>
-        <li>Title Placeholder</li>
-        <li><a href =''></a>Placeholder</li>
-        <li><a href =''></a>Placeholder</li>
-        <li><a href =''></a>Placeholder</li>
-      </ul>
-    </div>
-    <p>&copy; 2024 The Pocket Hotel. All rights reserved.</p>
-  </footer>
 
-  <script src="rooms.js"></script>
+    <!-- Footer -->
+    <footer>
+        <div id="flextape">
+            <img src="final logo.jpg">
+            <h1>The Pocket Hotel</h1>
+        </div>
+        <div class="pages">
+            <ul>
+                <li>Book something</li>
+                <li><a href='roomsbooking.html'>Book a Room</a></li>
+                <li><a href='facilityform.html'>Book a Facility</a></li>
+                <li><a href='booking.html'>Get a Reservation</a></li>
+            </ul>
+            <ul>
+                <li>Information Pages</li>
+                <li><a href='rooms.html'>Our Rooms</a></li>
+                <li><a href='dining.html'>Our Restaurant</a></li>
+                <li><a href='contact_us.html'>Contact Us</a></li>
+            </ul>
+            <ul>
+                <li>Title Placeholder</li>
+                <li><a href=''></a>Placeholder</li>
+                <li><a href=''></a>Placeholder</li>
+                <li><a href=''></a>Placeholder</li>
+            </ul>
+        </div>
+        <p>&copy; 2024 The Pocket Hotel. All rights reserved.</p>
+    </footer>
+
+    <script src="rooms.js"></script>
 </body>
 </html>
 

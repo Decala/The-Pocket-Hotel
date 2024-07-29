@@ -198,45 +198,48 @@ nav button.active {
 }
 
 /*Carousel*/
-.carousel {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    margin: 20px 0;
-}
+/* Your existing CSS */
 
-.carousel-images {
-    display: flex;
+.roomcarousel {
+    position: relative;
+    width: 100%;
+    height: auto;
     overflow: hidden;
-    width: 400px;
-    height: 300px; 
-    scroll-behavior: smooth;
+    max-width: 450px;
+    max-height: 300px;
+    margin: 0 auto;
 }
 
-.carousel-images img {
-    min-width: 100%;
-    transition: transform 0.5s ease;
+.room-image {
+    display: none;
+    width: 100%;
+    height: auto;
+    animation: fade 1s ease-in-out; /*Apply the fade-in/out animation*/
 }
 
-.carousel-buttons {
-    display: flex;
-    justify-content: space-between;
-    width: 75px;
-    margin-top: 10px;
-}
-
-.prev, .next {
-    background-color: #78B7C9;
+.carousel-button {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     border: none;
     padding: 10px;
     cursor: pointer;
-    transition: background-color 0.3s;
+    font-size: 18px;
+    z-index: 1;
 }
 
-.prev:hover, .next:hover {
-    background-color: #555;
+.prev {
+    left: 10px;
 }
+
+.next {
+    right: 10px;
+}
+
+/* Additional styles to fix the footer position, etc. */
+
 
 /*Book now button */
 .booknow {
@@ -339,6 +342,12 @@ footer {
         width: 100%;
     }
 
+    .carousel-button {
+        font-size: 14px;
+        padding: 8px;
+    }
+
+
     .header-text h1 {
         font-size: 50px;
     }
@@ -385,4 +394,10 @@ footer {
     .footer .pages ul {
         width: 100%;
     }
+}
+
+/*Animation*/
+@keyframes fade {
+    from { opacity: 0; }
+    to { opacity: 1; }
 }

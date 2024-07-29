@@ -1,46 +1,45 @@
-document.addEventListener('DOMContentLoaded', function() {
-    const carousels = document.querySelectorAll('.carousel');
+document.addEventListener('DOMContentLoaded', function () {
+    const slideIndices = {
+        'standardCarousel': 1,
+        'deluxeCarousel': 1,
+        'suiteCarousel': 1
+    };
 
-    carousels.forEach(carousel => {
-        const carouselImages = carousel.querySelector('.carousel-images');
-        const images = carouselImages.querySelectorAll('img');
-        const prevButton = carousel.querySelector('.prev');
-        const nextButton = carousel.querySelector('.next');
+    const slideInterval = 5000; // Time in milliseconds for automatic slide transition
 
-        let currentIndex = 0;
-
-        function updateCarousel() {
-            const offset = -currentIndex * 100;
-            carouselImages.style.transform = `translateX(${offset}%)`;
-        }
-
-        prevButton.addEventListener('click', function() {
-            if (currentIndex > 0) {
-                currentIndex--;
-            } else {
-                currentIndex = images.length - 1;
-            }
-            updateCarousel();
+    function showSlides(slideIndex, carouselId) {
+        const slides = document.querySelectorAll(`#${carouselId} .room-image`);
+        const dots = document.querySelectorAll(`#${carouselId} .dot`);
+        if (slideIndex > slides.length) { slideIndices[carouselId] = 1 }
+        if (slideIndex < 1) { slideIndices[carouselId] = slides.length }
+        slides.forEach((slide, index) => {
+            slide.style.display = (index === slideIndices[carouselId] - 1) ? 'block' : 'none';
         });
+    }
 
-        nextButton.addEventListener('click', function() {
-            if (currentIndex < images.length - 1) {
-                currentIndex++;
-            } else {
-                currentIndex = 0;
-            }
-            updateCarousel();
+    function changeSlide(n, carouselId) {
+        showSlides(slideIndices[carouselId] += n, carouselId);
+    }
+
+    function autoSlide(carouselId) {
+        setInterval(() => {
+            changeSlide(1, carouselId);
+        }, slideInterval);
+    }
+
+    document.querySelectorAll('.carousel-button').forEach(button => {
+        button.addEventListener('click', function () {
+            const carouselId = this.parentElement.id;
+            const direction = this.classList.contains('prev') ? -1 : 1;
+            changeSlide(direction, carouselId);
         });
-
-        // Optional: Auto-slide
-        setInterval(function() {
-            nextButton.click();
-        }, 5000); // Adjust the interval time as needed
     });
 
-    // Booking button functionality
-    const bookNowButton = document.querySelector('.booknow-button');
-    bookNowButton.addEventListener('click', function(event) {
-        window.location.href = 'roomsbooking.html';
+    const carousels = Object.keys(slideIndices);
+    carousels.forEach(carouselId => {
+        showSlides(slideIndices[carouselId], carouselId);
+        autoSlide(carouselId);
     });
 });
+
+
