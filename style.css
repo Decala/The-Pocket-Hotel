@@ -138,28 +138,24 @@ header img{
     font-size: 25px;
   }
   
-  .location{
-    display: flex;
-    flex-direction: row;
-    padding-left:20%;
-    flex-wrap: wrap;
-    padding-right:20%;
-    img{
-      width: 45%;
-      height: 100%;
-      padding-right: 1%;
-      flex:30%;
-    }
-    
-    p{
-      margin:1px;
-      font-family: Arial, sans-serif;
-      color: black;
-      font-size: 15px;
-      padding-top: 1px;
-      padding-bottom: 1px;
-      flex:40%;
-    }
+  #map {
+    height: 350px;
+    align-content: center;
+    overflow: clip !important;
+    display:block;
+    padding-right:30%;
+  }
+  
+  .location p{
+    margin:1px;
+    font-family: Arial, sans-serif;
+    color: black;
+    font-size: 15px;
+    padding-top: 1px;
+    padding-bottom: 1px;
+    padding-left: 15%;
+    padding-right: 15%;
+    text-align: center;
   }
 
   
@@ -224,38 +220,41 @@ header img{
     flex: 50%;
   }
 
-  input[type=text], select, textarea {
-    width: 80%;
-    padding: 12px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    resize: vertical;
-    font-family: Arial, sans-serif;
-  }
-
-  label {
-    padding: 12px;
-    display: inline-block;
-  }
-
-  input[type=submit] {
-    background-color: #02acf5;
-    color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-    float: right;
-  }
-
-  input[type=submit]:hover {
-    background-color: #024ea1;
-  }
-
   .container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+      background: #fff;
+      padding: 20px;
+      margin: 20px 0;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 5px;
+    
+    label {
+      display: block;
+      margin-top: 10px;
+      color: #666;
+    }
+    input, select, textarea {
+      width: 95%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+
+    .submit-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background: #78B7C9;
+      color: #fff;
+      border: none;
+      border-radius: 5px;
+      margin-top: 20px;
+      cursor: pointer;
+    }
+
+    .submit-button:hover {
+      background: #555;
+    }
   }
 
   .col-15 {
@@ -334,21 +333,14 @@ footer {
 1920px desktop*/
 @media (max-width: 810px) {
   #Home{
-    .location{
-      display:block;
-      padding-left: 0px;
-      padding-right:0px;
-      img{
-        padding: 0px;
-        width: 100%;
-        height: 100%;
-      }
-      p{
-        text-align:center;
-        padding-right:0px;
-      }
+    .location p{
+      padding-left: 5%;
+      padding-right: 5%;
     }
-  }
+    #second_block{
+      margin-left: 5%;
+      margin-right: 5%;
+    }
 }
 
 @media (max-width: 682px) {
