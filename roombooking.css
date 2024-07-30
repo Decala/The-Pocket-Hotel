@@ -210,6 +210,24 @@ select.error {
     margin-bottom: 10px;
 }
 
+.back {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.back-button {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #4889A1;
+    color: #fff;
+    text-decoration: none;
+    border-radius: 5px;
+}
+
+.back-button:hover {
+    background: #555;
+}
+
 /* Footer for Pocket Hotel*/
 
 footer {
