@@ -1,3 +1,5 @@
+// DONE BY SHIN THANT AUNG (243816M)
+
 document.addEventListener('DOMContentLoaded', function () {
     const form = document.querySelector('.booking-form');
     const paymentmethod = document.getElementById('payment');
@@ -24,6 +26,24 @@ document.addEventListener('DOMContentLoaded', function () {
             }
         });
     }
+
+    // Name validation
+    const nameInput = document.getElementById('name');
+    const nameError = document.getElementById('name-error');
+    const namePattern = /^[a-zA-Z\s]{5,}$/;
+    validateField(nameInput, namePattern, nameError, 'Name must be at least 5 letters long and contains only letter and spaces.')
+
+    // Passport/NRIC validation
+    const nricInput = document.getElementById('nric');
+    const nricError = document.getElementById('nric-error');
+    const nricPattern = /^(?=.*[A-Za-z])[A-Za-z0-9]{7,}$/;
+    validateField(nricInput, nricPattern,nricError, 'Please enter a valid passport or NRIC number.')
+
+    // Email validation
+    const emailInput = document.getElementById('email');
+    const emailError = document.getElementById('email-error');
+    const emailPattern = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
+    validateField(emailInput, emailPattern,emailError, 'Please enter a valid Email address.')
 
     // Phone number validation
     const phoneInput = document.getElementById('phone');
@@ -98,10 +118,11 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (!isValid) {
+            // In case, invalid check in/out date error
             event.preventDefault();
-            alert('Please fill out all required fields correctly.');
+            alert('Please fill out all the required fields correctly.');
         } else {
-            // Allow form submission to redirect to confirmation page
+            // Direct to confirmation
             form.action = 'roomconfirmation.html';
         }
     });

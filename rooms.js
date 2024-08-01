@@ -1,3 +1,5 @@
+// DONE BY SHIN THANT AUNG (243816M)
+
 document.addEventListener('DOMContentLoaded', function () {
     const slideIndices = {
         'standardCarousel': 1,
@@ -5,8 +7,9 @@ document.addEventListener('DOMContentLoaded', function () {
         'suiteCarousel': 1
     };
 
-    const slideInterval = 5000; // Time in milliseconds for automatic slide transition
+    const slideInterval = 5000; // Time for automatic carousel slideshow)
 
+    //Display the slides
     function showSlides(slideIndex, carouselId) {
         const slides = document.querySelectorAll(`#${carouselId} .room-image`);
         const dots = document.querySelectorAll(`#${carouselId} .dot`);
@@ -17,16 +20,20 @@ document.addEventListener('DOMContentLoaded', function () {
         });
     }
 
+    //Change slides accordig to index
     function changeSlide(n, carouselId) {
         showSlides(slideIndices[carouselId] += n, carouselId);
     }
 
+    //Automatic slide changing
     function autoSlide(carouselId) {
         setInterval(() => {
             changeSlide(1, carouselId);
         }, slideInterval);
     }
 
+
+    //Manual button for changing slides via index changing
     document.querySelectorAll('.carousel-button').forEach(button => {
         button.addEventListener('click', function () {
             const carouselId = this.parentElement.id;

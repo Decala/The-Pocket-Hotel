@@ -47,13 +47,17 @@
             <h2>Enter Your Details</h2>
 
             <label for="name">Name:</label>
-            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+            <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            <span class="error-message" id="name-error"></span>
 
             <label for="nric">Passport/NRIC</label>
             <input type="text" id="nric" name="nric" placeholder="Enter your Passport/NRIC no." required>
+            <span class="error-message" id="nric-error"></span>
             
             <label for="email">Email:</label>
             <input type="email" id="email" name="email" placeholder="Enter your Email" required>
+            <span class="error-message" id="email-error"></span>
+
             
             <label for="phone">Phone Number:</label>
             <input type="tel" id="phone" name="phone" placeholder="Enter your phone number. Example - +651234567">
@@ -94,7 +98,7 @@
                 <span class="error-message" id="cardnumber-error"></span>
 
                 <label for="expiry">Expiry Date</label>
-                <input type="text" id="expiry" name="expiry">
+                <input type="text" id="expiry" name="expiry" placeholder="MM/YY">
                 <span class="error-message" id="expiry-error"></span>
 
                 <label for="cvv">CVV</label>
