@@ -7,7 +7,7 @@
   <meta name="viewport" content="width=device-width">
   <title>The Pocket Hotel</title>
   <link href="style.css" rel="stylesheet" type="text/css" />
-  <script src = "script.js"></script>
+  <script src = "contact_us.js"></script>
 </head>
   
 <header>
@@ -48,21 +48,22 @@
         <p>+(65) 6888 8889</p>
         <br>
         <address>
-          <a href="mailto:p0ck3th0t3l@gmail.com">p0ck3th0t3l@gmail.com</a>
+          <p><a href="mailto:p0ck3th0t3l@gmail.com">p0ck3th0t3l@gmail.com</a></p>
         </address>
       </div>
     </div>
     <hr>
     <br>
-    <div>
-      <h3>Any Requests? Leave us a message</h3>
       <div class="container">
+        <h2>Any Requests? Leave us a message</h2>
         <form action="/action_page.php">
           <label for="name">Name:</label>
           <input type="text" id="name" name="name" placeholder="Your name.." required>
+          <span class="error_message" id="name_error"></span>
           
           <label for="room_no">Room Number:</label>
-              <input type="text" id="room_no" name="room_no" placeholder="If you are not yet staying with us, enter e370" pattern="[a-e]+[0-9]{3}" required>
+          <input type="text" id="room_no" name="room_no" placeholder="If you are not yet staying with us, enter e370" pattern="[a-e]+[0-9]{3}" required>
+          <span class="error_message" id="room_error"></span>
           
           <label for="contact">Contact:</label>
           
@@ -71,16 +72,17 @@
                 <option value="Email">Email</option>
             </select>
 
-          <input type="text" id="contact_way" name="contact" placeholder="For us to contact you back" pattern="[+]+[0-9]{1,3}+[8-9]+[0-9]{7}" required>
+          <input type="text" id="contact_way" name="contact" placeholder="For us to contact you back" required>
+          <span class="error_message" id="contact_error"></span>
           
           <label for="subject">Subject:</label>
-          
           <textarea id="subject" name="subject" placeholder="Write something.." required></textarea>
-          <input type="submit" value="Submit">
-            </div>
+          <span class="error_message" id="subject_error""></span>
+          
+          <input id = "submit" type="submit" value="Submit">
+           
         </form>
-      </div>
-  
+        </div>
     </div>
   </div>
   </body>
@@ -104,10 +106,12 @@
         <li><a href ='contact_us.html'>Contact Us</a></li>
       </ul>
       <ul>
-        <li>Title Placeholder</li>
-        <li><a href =''>Placeholder</a></li>
-        <li><a href =''>Placeholder</a></li>
-        <li><a href =''>Placeholder</a></li>
+        <li>Connect With Us</li>
+        <div class = "socials">
+        <li><a href =''><img src = "twitter.jpg"></a></li>
+        <li><a href =''><img src = "instragram.png"></a></li>
+        <li><a href =''><img src = "facebook.png"></a></li>
+        </div>
       </ul>
     </div>
     <p>&copy; 2024 The Pocket Hotel. All rights reserved.</p>
