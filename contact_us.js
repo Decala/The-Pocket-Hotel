@@ -54,3 +54,5 @@ document.addEventListener('DOMContentLoaded', function () {
          }
     document.getElementById("submit").addEventListener("click", () => blankCheck() );
 });
+
+//By Declan Chua 240598B

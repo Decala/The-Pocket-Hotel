@@ -1,4 +1,4 @@
-/* Css done by Declan*/
+/* Css done by Declan Chua, 240598B*/
 header a{
   color: #fff;
   text-decoration: none;
@@ -305,6 +305,11 @@ footer {
     color:white;
     text-decoration: none;
   }
+
+  a:hover{
+    text-decoration: underline;
+  }
+  
   .pages{
     display: flex;
     ul{
@@ -387,9 +392,7 @@ footer {
         width: 100%;
     }
 
-    footer .pages .socials{
-      display: inline;
-    }
+    
 }
 
 @media (max-width: 768px) {
@@ -409,8 +412,7 @@ footer {
     flex-direction: column;
   }
 
-  .tab button {
-      
+  .tab button {     
       padding: 8px;
       font-size: 12px;
   }
@@ -425,13 +427,7 @@ footer {
       font-size: 12px;
   }
 
-
-  .footer #flextape {
-      width: 80%;
-  }
-
-  .footer .pages {
-      flex-direction: column;
-      align-items: center;
+  footer .pages .socials{
+    display: inline;
   }
 }

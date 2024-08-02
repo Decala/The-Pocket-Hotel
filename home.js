@@ -19,3 +19,5 @@ async function initMap() {
 }
 //Source:
 //https://developers.google.com/maps/documentation/javascript/overview
+
+//By Declan Chua, 240598B
